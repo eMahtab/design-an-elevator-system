@@ -1,5 +1,6 @@
 # Design an elevator system
 
+![Elevator](elevator.jpeg?raw=true)
 
 # Elevator Scheduling Algorithm
 1. First come first serve (FCFS)
