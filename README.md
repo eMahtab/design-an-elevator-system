@@ -27,5 +27,12 @@ Alternatively, an array can be generated for the requests, as shown in the diagr
 ## Advantages and Drawbacks of SSTF Algorithm
 There are some advantages of SSTF over FCFS algorithm. It clearly lowers the average response time of the elevator. Also, the movement of the elevator is significantly reduced. One major flaw of the design is the possibility of starvation for some of the requests. Starvation implies that large wait times may be involved for passengers that have a higher seek time (or distance from the elevator) as compared to the other incoming requests. So if there is a passenger on the top floor and most of the passengers are on the lower floors, the elevator will keep on serving those and ignore the request from the topmost floor. Also, as is the case with the FCFS algorithm, SSTF is not capable of serving requests in parallel.
 
+## Elevator Algorithm (SCAN)
+SCAN is a disk scheduling algorithm that very closely reflects how an actual elevator functions, which is why it’s also sometimes called the Elevator Algorithm. Consequently, it’s an excellent approach to pick for designing your elevator scheduling algorithm. The concept aims to serve multiple requests in parallel, unlike the algorithms discussed above.
+
+The elevator will move all the way up, serving all the requests that come in its way. Only once it reaches the top floor, the elevator will change its direction, moving all the way to the last floor, serving all the requests that come in its way.
+
+![4](4.jpg?raw=true)
+
 # References :
 https://www.youtube.com/watch?v=siqiJAJWUVg
