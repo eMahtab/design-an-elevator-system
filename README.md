@@ -2,6 +2,11 @@
 
 
 # Elevator Scheduling Algorithm
+1. First come first serve (FCFS)
+2. Shortest seek time first (SSTF)
+3. Scan
+4. Look
+
 ## First Come First Serve (FCFS)
 The simplest method for the elevator to serve passengers’ requests is on a first-come-first-serve basis. The requests made by the passengers are added in a queue, as shown by the Request Queue in the diagram below. 
 For simplicity, let’s assume that there are 11 floors in a building and a single elevator to serve requests. Suppose, a passenger on floor 2 wants to go down. This request is added to the queue. Next, a passenger on floor 4 wants to go up. This request is also added to the queue. More requests are added to the queue as they come in.
@@ -39,7 +44,8 @@ For this approach, the elevator scans for a request at every floor while moving 
 ## Advantages And Disadvantages Of SCAN
 The main advantage of SCAN over FCFS and SSTF is that it can serve several requests in parallel. However, with this approach, the elevator is continuously moving in cycles (all the way up, all the way down and repeat) even if there are no passengers, wasting resources. Also, the wait time will be considerably higher for floors that the elevator has just visited.
 
-
+## LOOK
+The disadvantages of the SCAN algorithm can be overcome with the LOOK algorithm. This approach is similar to SCAN, except that instead of moving to the last floor (highest or lowest) in the direction it is moving in, it moves to the last request in that direction and changes its direction from there. It prevents delays due to unnecessary travel to the last floor in a direction and also eliminates the possibility of the elevator moving when there are no requests.
 
 # References :
 https://www.youtube.com/watch?v=siqiJAJWUVg
