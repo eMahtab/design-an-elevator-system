@@ -20,7 +20,7 @@ For example, in the diagram, the elevator is moving up and the passenger on floo
 ## Shortest Seek Time First (SSTF)
 This algorithm aims at serving the requests with the shortest seek time first. This approach can be implemented by generating a Minheap from the passengers’ requests, based on the distance between the source floor and the elevator’s current floor. The topmost request is picked from the heap and served first. The minheap will change continuously as the position of the elevator changes. In the figure below, the distance of a request from the elevator’s current position is calculated as d.
 
-[3](3.png?raw=true)
+![3](3.png?raw=true)
 
 Alternatively, an array can be generated for the requests, as shown in the diagram above. For each request, the system pre-calculates the distance of the request from the elevator and then serves the one with the minimum distance.
 
