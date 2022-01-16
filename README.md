@@ -34,5 +34,12 @@ The elevator will move all the way up, serving all the requests that come in its
 
 ![4](4.jpg?raw=true)
 
+For this approach, the elevator scans for a request at every floor while moving up and down. In the diagram, the elevator starts at floor 3 and finds a request at floor 5 and 9 when moving up. It stops at these floors, picks the passenger and continues moving up. Only at the last floor, i.e., floor 10, the elevator will change direction and start moving down. It will drop the two passengers it has picked at their destination floor as soon as it comes in the elevator’s path. While moving down, the elevator checks at every floor and finds a request at floors 4 and 2. It picks the passengers as it reaches their floors and drops them as soon as their destination comes in its path.
+
+## Advantages And Disadvantages Of SCAN
+The main advantage of SCAN over FCFS and SSTF is that it can serve several requests in parallel. However, with this approach, the elevator is continuously moving in cycles (all the way up, all the way down and repeat) even if there are no passengers, wasting resources. Also, the wait time will be considerably higher for floors that the elevator has just visited.
+
+
+
 # References :
 https://www.youtube.com/watch?v=siqiJAJWUVg
