@@ -16,5 +16,16 @@ In the FCFS algorithm, requests are served in the order they were added to the q
 Though the FCFS algorithm is simple to implement and makes sure all requests get a fair chance, clearly there are flaws. There may be cases where large wait times are involved for passengers, that can be avoided by better solutions. Furthermore, it also involves unnecessary movement of the elevator, resulting in wastage of resources.
 For example, in the diagram, the elevator is moving up and the passenger on floor 3 requests for the elevator to take it down. A few moments later, a passenger on floor 6 requests to go down. The elevator will first go down to floor 3, serve the passenger completely and then go to floor 6 to take the passenger down again. Ideally, the elevator should have gone up, picked the passenger on floor 6 first, bringing them down on the way to floor 3 to serve the passenger that placed the request first.
 
+
+## Shortest Seek Time First (SSTF)
+This algorithm aims at serving the requests with the shortest seek time first. This approach can be implemented by generating a Minheap from the passengers’ requests, based on the distance between the source floor and the elevator’s current floor. The topmost request is picked from the heap and served first. The minheap will change continuously as the position of the elevator changes. In the figure below, the distance of a request from the elevator’s current position is calculated as d.
+
+[3](3.png?raw=true)
+
+Alternatively, an array can be generated for the requests, as shown in the diagram above. For each request, the system pre-calculates the distance of the request from the elevator and then serves the one with the minimum distance.
+
+## Advantages and Drawbacks of SSTF Algorithm
+There are some advantages of SSTF over FCFS algorithm. It clearly lowers the average response time of the elevator. Also, the movement of the elevator is significantly reduced. One major flaw of the design is the possibility of starvation for some of the requests. Starvation implies that large wait times may be involved for passengers that have a higher seek time (or distance from the elevator) as compared to the other incoming requests. So if there is a passenger on the top floor and most of the passengers are on the lower floors, the elevator will keep on serving those and ignore the request from the topmost floor. Also, as is the case with the FCFS algorithm, SSTF is not capable of serving requests in parallel.
+
 # References :
 https://www.youtube.com/watch?v=siqiJAJWUVg
