@@ -47,5 +47,24 @@ The main advantage of SCAN over FCFS and SSTF is that it can serve several reque
 ## LOOK
 The disadvantages of the SCAN algorithm can be overcome with the LOOK algorithm. This approach is similar to SCAN, except that instead of moving to the last floor (highest or lowest) in the direction it is moving in, it moves to the last request in that direction and changes its direction from there. It prevents delays due to unnecessary travel to the last floor in a direction and also eliminates the possibility of the elevator moving when there are no requests.
 
+![5](5.jpg?raw=true)
+
+Let’s consider the same example as the one discussed for the SCAN algorithm where the elevator was on floor 3 and there were requests on floor 5 and 9 while going up and 4 and 2 while going down. If you were to deploy the LOOK algorithm, the elevator will move up to floor 9, while picking floor 5 and 9 passengers on the way. From floor 9, since there are no requests ahead, the elevator moves down, picking passengers from floor 4 and 2. From floor 2, it changes direction since there are no requests to serve on the lower floors.
+
+## Advantages Of LOOK
+LOOK saves the system’s resources and wait times for the passengers over SCAN by not moving ahead if there are no requests on the further floors.
+Suppose that there are multiple elevators to serve requests for passengers, and the elevators are stationary since there are no requests to serve. When a new request comes in, you can use the shortest seek time to decide which elevator will move towards it. In real-world applications, elevator systems typically use the LOOK algorithm in combination with certain other algorithms to optimize the design, depending on the requirements.
+
+
+In case we have multiple elevators in the building, the scheduling algorithm will also take into account the state of the elevators before deciding which elevator will serve the request. Every elevator can be in one of the following states:
+1. Elevator is idle.
+2. It is moving towards the passenger where the direction of the source and destination floors is the same.
+3. It is moving towards the passenger where the direction of the source and destination floors is different.
+4. It is moving away from the passenger.
+
+An efficient solution will be to use an elevator in the first two states to serve the request.
+
+
 # References :
-https://www.youtube.com/watch?v=siqiJAJWUVg
+1. https://www.youtube.com/watch?v=siqiJAJWUVg
+2. https://medium.com/double-pointer/system-design-interview-elevator-system-for-a-multi-storey-building-b854e766adc7
