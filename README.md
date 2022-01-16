@@ -8,10 +8,9 @@ For simplicity, let’s assume that there are 11 floors in a building and a sing
 
 ![1](1.png?raw=true)
 
-![2](2.png?raw=true)
-
 In the FCFS algorithm, requests are served in the order they were added to the queue. This means that the elevator will go to the passenger on floor 2 first and drop them to their destination. Next, the elevator will go to floor 4 and take the passenger up to their destination, before going to floor 3 and so on. On the graph below, you can see the position of the elevator and the time elapsed as the elevator serves requests.
 
+![2](2.png?raw=true)
 
 
 
