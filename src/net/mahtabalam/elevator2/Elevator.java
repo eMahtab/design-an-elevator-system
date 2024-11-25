@@ -30,7 +30,6 @@ class Elevator {
     }
 
     public void moveToFloor(int targetFloor) {
-        System.out.println("Elevator " + id + " moving from floor " + currentFloor + " to floor " + targetFloor);
         while (currentFloor < targetFloor) {
             currentFloor++;
             System.out.println("Elevator " + id + " moving UP to floor " + currentFloor);
